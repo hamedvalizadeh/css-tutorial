@@ -1,6 +1,6 @@
 # Basic Selectors
 
-###### Type Selectors
+#### Type Selectors
 
 selecting an element by tag name. for example:
 
@@ -9,7 +9,7 @@ selecting an element by tag name. for example:
 - a { ... }
 - div { ... }
 
-###### Class Selectors
+#### Class Selectors
 
 selecting an element by class value assigned through class attribute of the element.
 
@@ -25,7 +25,7 @@ to style it in CSS we can select it as following:
 
 - .test-css-class-name { ... }
 
-###### Id Selector
+#### Id Selector
 
 to select an element by id value assigned through id attribute of the element.
 
@@ -47,7 +47,7 @@ to style it in CSS we can select it as following:
 
 # Combinators
 
-###### Descendant Combinator
+#### Descendant Combinator
 
 to use more than 2 selectors we can combine the with space, like bellow examples:
 
@@ -56,7 +56,7 @@ to use more than 2 selectors we can combine the with space, like bellow examples
 - #id1 .class-name { ... }
   - this combination selects all elements with class name ((class-name)) that their main parent is an element with id value ((id1)).
 
-###### Child Combinator
+#### Child Combinator
 
 to use more than 2 selectors we can combine the with ((>)), like bellow examples:
 
@@ -65,7 +65,7 @@ to use more than 2 selectors we can combine the with ((>)), like bellow examples
 - #id1 > .class-name { ... }
   - this combination selects all immediate child elements with class name ((class-name)), that their first parent is an element with id value ((id1)).
 
-###### Sibling Combinator
+#### Sibling Combinator
 
 to use more than 2 selectors we can combine the with ((+)), like bellow examples:
 
@@ -76,7 +76,7 @@ to use more than 2 selectors we can combine the with ((+)), like bellow examples
   - this combination selects element with class name ((class-name))  adjacent to an element with id value ((id1)).
   - in HTML that element with class name ((class-name)) is selected which is the next sibling of an element with id value ((id1)).
 
-###### General Sibling Combinator
+#### General Sibling Combinator
 
 to use more than 2 selectors we can combine the with ((~)), like bellow examples:
 
