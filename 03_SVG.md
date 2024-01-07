@@ -58,8 +58,6 @@ in the following example the SVG has view port of 50 pixel width and 50 pixel he
 
 
 
-
-
 ***
 
 # Shapes in SVG
@@ -73,3 +71,10 @@ in the following example the SVG has view port of 50 pixel width and 50 pixel he
 - path
   - to draw irregular shape.
 
+
+
+***
+
+# Styling
+
+it is like normal styling in html that can be done internally inline or externally by css file, with some minor differences. for example instead of ((background-color)) we should use ((fill)). the styles that are added directly to SVGs are called presentation attributes. a comprehensive list of presentation attributes of SVGs are resides in ((https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)).      
