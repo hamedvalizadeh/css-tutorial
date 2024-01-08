@@ -55,3 +55,17 @@ it sets the origin of transformation. the value could be one of following types:
 
 
 
+***
+
+# Accessibility Consideration
+
+for those users that have some kind of disorders and prefer to disable or reduce animations, we can check the setting by ((prefers-reduced-motion)) media (a kind of at-rule), and change the animation property of the desired element. 
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  rect {
+    animation: none;
+  }
+}
+```
+
