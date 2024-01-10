@@ -83,3 +83,38 @@ css-selector {
 }
 ```
 
+***
+
+# display
+
+this property is used to change default behavior of the element. there are at-least 2 kinds of elements. inline-level and block-level. an inline element will take up exact amount of space that is needed by its content. by contrast the block-level elements like ((div)), ((p)), and ((ul)) fill the entire line it resides in unless a given a set width. there are following types of value for display property:
+
+- inline
+- inline-block
+- block
+- inline-flex
+- flex
+- grid    
+
+
+
+***
+
+# content
+
+we can use this property in pseudo-element to content before and after an element. for example to set quote before and after a ((blockquote)) element, we can use it as follow:
+
+```css
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+```
+
+  
+
+
+
