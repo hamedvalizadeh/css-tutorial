@@ -356,3 +356,62 @@ to change default alignment of a text we have following properties:
 - hyphens
   - it specify the behavior when a word break to the new line. by default nothing special happen, but if we set it to ((auto)) the a ((-)) sign will connect the broken word.
 
+
+
+***
+
+# float
+
+this property will push the element to the right or left and cause text and inline elements wrap around it. it has following values:
+
+- inline-end
+- inline-start
+- left
+- right
+
+
+
+***
+
+# max-width
+
+if an element has this property set, when the available space exceeds the amount of specified max width, the element width will not grow more than that. imagine you want to design your site for maximum of 1200px, and also don't want to support more than this width for clients that have wider monitor.
+
+
+
+***
+
+# container-type
+
+Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts. Container queries are an alternative to [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
+
+To use container queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later. To do this, use the [`container-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/container-type) property with a value of `size`, `inline-size`, or `normal`.
+
+These values have the following effects:
+
+- [`size`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries#size)
+
+  The query will be based on the [inline and block](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions of the container. Applies layout, style, and size containment to the container.
+
+- [`inline-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries#inline-size)
+
+  The query will be based on the [inline](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions of the container. Applies layout, style, and inline-size containment to the element.
+
+- [`normal`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries#normal)
+
+  The element is not a query container for any container size queries, but remains a query container for container style queries.
+
+
+
+Example
+
+```css
+body {
+  container-type: inline-size;
+}
+
+@container (min-width: 955px) {
+  ... some css styles
+}
+```
+
