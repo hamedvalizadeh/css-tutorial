@@ -98,7 +98,9 @@ this property is used to change default behavior of the element. there are at-le
 
 
 
-### grid
+***
+
+# display: grid
 
 it is one of display property to layout the desired area of the web page inside squares or rectangles between network of lines cross each others.
 
@@ -150,7 +152,42 @@ to place elements on grid cells explicitly we use this property. by this propert
 <footer style="grid-area: footer1;">...</footer>
 ```
 
- 
+
+
+***
+
+# display: multi-column layout
+
+to have content of an element in multiple columns we can use this kind of layout. the columns count can be specified with 2 methods:
+
+- by setting column count. in this way browser will divide the available space by the count we specified and assign the result to each column width.
+  - column-count: 3;
+- by setting column width. in this way browser will divide the available space by the width we specified and creates columns equal to the division result.
+  - column-width: 150px;
+
+
+
+**Caution:** to specify line between each column we should use property ((column-rule)), and for having margin in columns content with their surrounding we will use ((column-gap)), and to have margin to entire row we can use ((margin)):
+
+following is an example:
+
+```css
+  .my-article {
+    column-count: 3;
+    column-rule: 2px solid #333333;
+    column-gap: 42px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  .article-2 {
+    column-width: 150px;
+    column-rule: 2px solid #333333;
+    column-gap: 42px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+```
 
 
 
