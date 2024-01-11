@@ -333,4 +333,26 @@ following are example for some of functions above:
 
 
 
-**Caution:** applying filters has negative impact on webpage performance. so if there are a lot of image in the webpage that all need a kind of filter, it is suggested to pre-process them and not to use filter property for all of them.  
+**Caution:** applying filters has negative impact on webpage performance. so if there are a lot of image in the webpage that all need a kind of filter, it is suggested to pre-process them and not to use filter property for all of them.
+
+
+
+***
+
+# text alignment
+
+to change default alignment of a text we have following properties:
+
+- text-alignment
+  - to control the alignment of the text. it has following values:
+    -   right
+    - center
+    - left
+    - end
+    - start
+    - justify
+- text-justify
+  - by this property we specify the method in which the process of justify occur.
+- hyphens
+  - it specify the behavior when a word break to the new line. by default nothing special happen, but if we set it to ((auto)) the a ((-)) sign will connect the broken word.
+
