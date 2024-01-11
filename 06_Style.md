@@ -116,5 +116,37 @@ blockquote::after {
 
   
 
+***
 
+# list-style
+
+with this property in hand we can change the symbol before ((li)) element of ((ul)) element. there are some pre-defined values such as ((circle)), ((lower-alpha)), and some others, but if we need our custom we can use at-rule ((counter-style)). this at-rule has following properties:
+
+- symbols
+- system
+- suffix
+
+
+
+following is an example that will use hot coffee emoji as symbol with an space prefix before ((li)) that repeats for all items:
+
+```css
+@counter-style my-coffre-list-style {
+  symbols: "\2615";
+  system: cyclic;
+  suffix: " ";
+}
+
+article ul {
+  list-style: my-coffre-list-style;
+}
+```
+
+
+
+***
+
+# list-style-image
+
+instead of using at-rule ((counter-style)) to customize our list style, we can use and image instead instead. but we have not the same control over our style in comparison with ((counter-style)). 
 
