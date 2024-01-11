@@ -162,7 +162,7 @@ to have content of an element in multiple columns we can use this kind of layout
 
 - by setting column count. in this way browser will divide the available space by the count we specified and assign the result to each column width.
   - column-count: 3;
-- by setting column width. in this way browser will divide the available space by the width we specified and creates columns equal to the division result.
+- by setting column width. in this way browser will divide the available space by the width we specified and creates number of columns equal to the division result.
   - column-width: 150px;
 
 
@@ -187,6 +187,26 @@ following is an example:
     margin-top: 36px;
     margin-bottom: 36px;
   }
+```
+
+
+
+**Caution:** if there is an element in the content that you don't want to be in the columns, use the property ((column-span)) and set its value as ((all)). as follow:
+
+```css
+blockquote{
+  column-span: all
+}
+```
+
+
+
+**Caution:** sometimes images inside ((figure)) element will apart from its ((figcaption)) and split in 2 different columns in multiple-column layout. to prevent it from happening we can use ((break-inside)) property as follow:
+
+```css
+figure{
+  break-inside: avoid;
+}
 ```
 
 
