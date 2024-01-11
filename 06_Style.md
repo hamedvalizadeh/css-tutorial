@@ -150,3 +150,74 @@ article ul {
 
 instead of using at-rule ((counter-style)) to customize our list style, we can use and image instead instead. but we have not the same control over our style in comparison with ((counter-style)). 
 
+
+
+***
+
+# filter
+
+this property is used to apply filter on images like what is common in programs like photoshop or Instagram. there are following functions as a value for this property:
+
+- contrast
+- graystyle
+- invert
+-  saturate
+- sepia
+- hue-rotate
+- drop-shadow
+- blur
+- big
+- brightness
+- opacity
+
+
+
+following are example for some of functions above:
+
+```css
+.contrast{
+  filter: contrast(200%);
+}
+
+.grayscale{
+  /*Full greyscale*/
+  filter: grayscale(100%);
+}
+
+.invert{
+  filter: invert(100%)
+}
+
+.saturate{
+  /*200% saturation*/
+  filter: saturate(200%)
+}
+
+.sepia{
+  filter: sepia(100%)
+}
+
+.hue-rotate{
+  filter: hue-rotate(90deg)  
+}
+
+.drop-shadow{
+  filter: drop-shadow(4px 5px 4px #444);
+}
+```
+
+
+
+**Caution:** this functions could be used together with a space as separator to form combination of filters. as follow:
+
+ 
+
+```css
+.test{
+  filter: contrast(175%) brightness(103%);
+}
+```
+
+
+
+**Caution:** applying filters has negative impact on webpage performance. so if there are a lot of image in the webpage that all need a kind of filter, it is suggested to pre-process them and not to use filter property for all of them.  
