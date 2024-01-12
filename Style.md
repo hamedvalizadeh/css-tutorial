@@ -156,6 +156,14 @@ to place elements on grid cells explicitly we use this property. by this propert
 
 ***
 
+# display: grid (place-items)
+
+if the property ((place-items)) set to ((center)) when the property ((display)) is set to ((grid)), will cause the content to be centered.
+
+
+
+***
+
 # display: multi-column layout
 
 to have content of an element in multiple columns we can use this kind of layout. the columns count can be specified with 2 methods:
