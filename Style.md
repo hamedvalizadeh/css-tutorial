@@ -424,3 +424,38 @@ body {
 ```
 
 **Reference:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries
+
+
+
+***
+
+# set image as text background
+
+to do this we can use property ((background-clip)) combined with ((text-fill-color)), ((background-size)), ((background)), and ((color)); following is and example that set background to the text inside ((h1)) element.
+
+```css
+h1 {
+  background: url("bg-img.jpg");
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+```
+
+
+
+- background
+  - sets the image as the background of element ((h1)).
+- background-size
+  - to ensure that the image fill entire space in element ((h1)), we set the value to ((cover)).
+- background-clip
+  - to specify which part of the ((h1)) element to clip the image as background.
+  - this property is of type nonstandard properties, and should consider vendor prefix for it.
+- text-fill-color
+  - we set it as ((transparent)) to be able to see the image in its background.
+  - this property is of type nonstandard properties, and should consider vendor prefix for it.
+- color
+  - we set it to show the text in some color (here white) for situation that background image fails to load.
