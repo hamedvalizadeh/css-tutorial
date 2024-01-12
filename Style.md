@@ -154,6 +154,73 @@ to place elements on grid cells explicitly we use this property. by this propert
 
 
 
+#### grid-template-rows
+
+defines the line names and track sizing functions of the [grid rows](https://developer.mozilla.org/en-US/docs/Glossary/Grid_Row). values could be space separated combinations of following types:
+
+- none
+- [linename]
+  - a id specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
+- <length>
+  - Is a non-negative length.
+- <percentage>
+  - Is a non-negative percentage.
+- <flex>
+  - Is a non-negative flex number with unit fr.
+- max-content
+  - Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
+- mi-content
+  - Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.
+- minmax(min, max)
+  - Is a functional notation that defines a size range, greater than or equal to *min*, and less than or equal to *max*.
+- auto
+- fit-content
+- repeat()
+- masonry
+- subgrid
+
+
+
+```css
+grid-template-rows: none;
+
+/* <track-list> values */
+grid-template-rows: 100px 1fr;
+grid-template-rows: [linename] 100px;
+grid-template-rows: [linename1] 100px [linename2 linename3];
+grid-template-rows: minmax(100px, 1fr);
+grid-template-rows: fit-content(40%);
+grid-template-rows: repeat(3, 200px);
+grid-template-rows: subgrid;
+grid-template-rows: masonry;
+
+/* <auto-track-list> values */
+grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
+
+/* Global values */
+grid-template-rows: inherit;
+grid-template-rows: initial;
+grid-template-rows: revert;
+grid-template-rows: revert-layer;
+grid-template-rows: unset;
+```
+
+
+
+
+
+
+
 ***
 
 # display: grid (place-items)
@@ -459,3 +526,48 @@ h1 {
   - this property is of type nonstandard properties, and should consider vendor prefix for it.
 - color
   - we set it to show the text in some color (here white) for situation that background image fails to load.
+
+
+
+***
+
+# outline
+
+this is like ((border)) property and its value is like that, but the border is outside of element.
+
+```css
+.test{
+  outline: 1px solid red;
+}
+```
+
+
+
+***
+
+# outline-offset
+
+this is used to set space between ((outline)) and element itself.
+
+```css
+.test{
+  outline-offset: 3px;
+}
+```
+
+
+
+***
+
+# calc function
+
+this function is to calculate the measurements that are not clear at design time. for example when we want to set 4px less than entire space.
+
+```css
+.test{
+  height: calc(100% - 4px);
+}
+```
+
+
+
