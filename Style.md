@@ -571,3 +571,19 @@ this function is to calculate the measurements that are not clear at design time
 
 
 
+***
+
+# not pseudo class
+
+by the use of this class we can filter selectors. for example following selectors select all elements inside div element except ((h2)):
+
+```css
+div > *:not(h2){
+   ...
+}
+```
+
+
+
+
+
